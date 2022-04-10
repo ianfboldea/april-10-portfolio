@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #fff;
+}
+i.fa{ 
+  font-family:FontAwesome!important; 
+}
+
+/* LANDING SCREEN STYLING */
+.landing-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.portrait-div img {
+  height: 100%;
+  float: right;
+  margin-right: -2em;
+}
+.portrait-div {
+  position: relative;
+  max-width: 60vw;
+  z-index: 0;
+  overflow: hidden;
+}
+.portrait-div::before {
+  content: "";
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.3);
+  transition: ease-in-out all 0.3s;
+}
+.portrait-div:hover::before {
+  background-color: rgba(0,0,0,0.6);
+  transition: ease-in-out all 0.3s;
+}
+.socials {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: left;
+  padding-left: 1em;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.socials a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  margin: 0 1em;
+  font-size: 1.75em;
+  transition: ease-in-out all 0.2s;
+}
+.socials a:hover {
+  color: rgba(255, 255, 255, 0.801);
+  transition: ease-in-out all 0.2s;
+}
+.introduction-blurb {
+  height: 100vh;
+  max-width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3.5em;
+}
+.introduction-blurb h1 {
+  font-size: 3em;
+}
+.important-links {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 2em;
+  list-style-type: none;
+}
+.important-links li {
+  display: inline-block;
+  margin: 0 1.25em;
+}
+.important-links li a {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #000;
+  text-decoration: none;
+  transition: ease-in-out all 0.2s;
+}
+.important-links li a:hover {
+  color:rgba(0, 0, 0, 0.6);
+}
+.footer-links {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  list-style-type: none;
+}
+.footer-links li {
+  display: inline-block;
+  margin: 0 1.25em;
+}
+.footer-links li a {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #000;
+  text-decoration: none;
+  transition: ease-in-out all 0.2s;
+}
+.footer-links li a:hover {
+  color:rgba(0, 0, 0, 0.6);
+}
+.footer-links li p {
+  font-size: 1.1em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1250px) {
+  .portrait-div img {
+    margin-right: -10em;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .portrait-div img {
+    margin-right: -10em;
+  }
+  .footer-links li a, .footer-links li p {
+    font-size: 0.9em;
+  }
+  .footer-links li {
+    margin: 0 0.75em;
+  }
+}
+@media screen and (max-width: 970px) {
+  .portrait-div img {
+    margin-right: -10em;
+  }
+  .introduction-blurb {
+    padding: 0 2em;
+  }
+  .introduction-blurb h1 {
+    font-size: 2.5em;
+  }
+  .footer-links {
+    flex-direction: column;
+    margin-bottom: 0.75em;
+    right: 2em;
+  }
+  .footer-links li {
+    margin: 0.1em 0;
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  .portrait-div img {
+    margin-right: -13em;
+  }
+}
+@media screen and (max-width: 810px) {
+  .landing-screen {
+    flex-direction: column;
+    height: auto;
+  }
+  .portrait-div {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+  .portrait-div img {
+    max-width: 100%;
+    margin-right: 0;
+    left: 0;
+  }
+  .introduction-blurb {
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+  .introduction-blurb h1 {
+    padding: 1em;
+  }
+  .footer-links {
+    background: #efefef;
+    margin-top: 1em;
+    margin-bottom: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+    right: auto;
+    padding: 2em 0;
+  }
+  .footer-links li {
+    text-align: left;
+  }
+  .footer-links li a, .footer-links li p {
+    font-size: 0.95em;
+    margin-left: 2em;
+  }
+  .important-links li a {
+    color: #fff;
+    transition: ease-in-out all 0.2s;
+  }
+  .important-links li a:hover {
+    color: rgba(255, 255, 255, 0.801);
+    transition: ease-in-out all 0.2s;
+  }
+}
